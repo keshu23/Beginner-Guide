@@ -5,7 +5,7 @@
     align-items: center;
     background-color: black; /* Black background */
     line-height: 5vh;
-    padding: 5px 1rem;
+    padding: 3px 1rem; /* Reduced top/bottom padding */
     position: fixed;
     width: 100%;
     top: 0;
@@ -15,7 +15,7 @@
 }
 
 .navbar.scrolled {
-    padding: 3px 1rem;
+    padding: 2px 1rem; /* Reduced top/bottom padding for scroll effect */
     background-color: #1a1a1a; /* Darker shade for scroll effect */
 }
 
@@ -113,7 +113,7 @@
 body {
     font-family: "Roboto", sans-serif; /* Fallback to Roboto for non-navbar elements */
     margin: 0;
-    padding-top: 80px; /* Offset for fixed navbar */
+    padding-top: 60px; /* Reduced padding to minimize gap */
     line-height: 1.6;
     color: #333; /* Dark gray for body text */
     background-color: #f4f4f4; /* Light gray background */
@@ -183,7 +183,7 @@ a:hover {
 /* Tablet and larger phones (max-width: 768px) */
 @media (max-width: 768px) {
     .navbar {
-        padding: 5px 0.75rem;
+        padding: 3px 0.75rem; /* Reduced top/bottom padding */
     }
 
     .menu-toggle {
@@ -198,7 +198,8 @@ a:hover {
         position: absolute;
         top: 100%;
         left: 0;
-        padding: 1rem;
+        padding: 1rem 1rem 1rem 1rem; /* Consistent padding */
+        padding-right: 2rem; /* Right padding for drawer */
         margin-right: 0; /* Remove right margin on mobile */
         gap: 0.5rem;
         animation: slideDown 0.3s ease-out;
@@ -232,6 +233,10 @@ a:hover {
         border-radius: 8px;
     }
 
+    body {
+        padding-top: 50px; /* Reduced padding for tablet */
+    }
+
     h1 {
         font-size: 1.5rem;
     }
@@ -259,7 +264,7 @@ a:hover {
 /* Small phones (max-width: 576px) */
 @media (max-width: 576px) {
     .navbar {
-        padding: 3px 0.5rem;
+        padding: 3px 0.5rem; /* Consistent padding */
     }
 
     .logo {
@@ -281,8 +286,13 @@ a:hover {
     }
 
     .nav-links {
-        padding: 0.5rem;
+        padding: 0.5rem 0.5rem 0.5rem 0.5rem; /* Consistent padding */
+        padding-right: 1.5rem; /* Right padding for drawer */
         margin-right: 0; /* Ensure no right margin on small screens */
+    }
+
+    body {
+        padding-top: 40px; /* Reduced padding for small phones */
     }
 
     h1 {
