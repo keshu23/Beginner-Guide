@@ -1,191 +1,308 @@
 /* ENHANCED NAVBAR STYLES */
-
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.95); /* Slightly transparent */
-  padding: 1rem 2rem;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  transition: background-color 0.3s ease, padding 0.3s ease;
-  backdrop-filter: blur(10px); /* Frosted glass effect (optional, modern browsers) */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black; /* Black background */
+    line-height: 5vh;
+    padding: 5px 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Reduce padding on scroll for a sleeker look */
 .navbar.scrolled {
-  padding: 0.75rem 2rem;
-  background-color: rgba(0, 0, 0, 0.98);
+    padding: 3px 1rem;
+    background-color: #1a1a1a; /* Darker shade for scroll effect */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
 }
 
 .logo a {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: white;
-  transition: transform 0.3s ease;
-}
-
-.logo a:hover {
-  transform: scale(1.05); /* Slight zoom on hover */
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap; /* Prevent wrapping of logo and text */
+    text-decoration: none;
 }
 
 .logo img {
-  width: 30px; /* Slightly larger */
-  height: 30px;
-  margin-right: 0.75rem;
-  border-radius: 50%; /* Makes logo circular if square */
+    width: 25px;
+    height: 25px;
+    margin-right: 0.75rem; /* Spacing between logo and text */
+    border-radius: 50%;
 }
 
-.logo span {
-  font-size: 1.1rem;
-  font-weight: 700;
-  font-family: "Roboto", sans-serif; /* Use your imported font */
-  letter-spacing: 0.5px;
+.logo a span {
+    color: #fff; /* White for logo text */
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1.8rem;
-  cursor: pointer;
-  padding: 0.5rem;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+    display: none;
+    background: none;
+    border: none;
+    color: #fff; /* White for hamburger icon */
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .menu-toggle:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .menu-toggle:focus {
-  outline: 2px solid #ddd;
+    outline: 2px solid #ddd;
 }
 
 .nav-links {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-  gap: 1.5rem; /* Modern way to add space between items */
-}
-
-.nav-links li {
-  /* margin-left: 20px; Not needed with gap */
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem; /* Right margin */
+    padding: 0;
+    gap: 1.5rem;
 }
 
 .nav-links a {
-  color: #e0e0e0; /* Slightly off-white for better readability */
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: 600;
-  font-family: "Roboto", sans-serif;
-  padding: 0.5rem 0.75rem;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-/* Hover effect: Slide-in underline */
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 50%;
-  background-color: #4CAF50; /* Accent color (green) */
-  transition: width 0.3s ease, left 0.3s ease;
+    color: #fff; /* White for nav links */
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    padding: 0.5rem 0.75rem;
+    border-radius: 5px;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: white;
+    color: #4CAF50; /* Green on hover */
 }
 
-.nav-links a:hover::after {
-  width: 100%;
-  left: 0;
-}
-
-/* Active link styling (you need to add class="active" to the current page's <a> tag in HTML) */
 .nav-links a.active {
-  color: #4CAF50;
-  font-weight: 700;
-}
-
-.nav-links a.active::after {
-  width: 100%;
-  left: 0;
-  background-color: #4CAF50;
+    color: #4CAF50; /* Green for active link */
+    font-weight: bold;
 }
 
 .sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
-/* MOBILE MENU ENHANCEMENTS */
-@media (max-width: 768px) {
-  .menu-toggle {
+/* General styles */
+body {
+    font-family: "Roboto", sans-serif; /* Fallback to Roboto for non-navbar elements */
+    margin: 0;
+    padding-top: 80px; /* Offset for fixed navbar */
+    line-height: 1.6;
+    color: #333; /* Dark gray for body text */
+    background-color: #f4f4f4; /* Light gray background */
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+section {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+h1 {
+    color: #1a3c6d; /* Deep blue for headings */
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    color: #1a3c6d; /* Deep blue for subheadings */
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+p, ul {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    color: #333; /* Dark gray for paragraph text */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
     display: block;
-  }
+    margin: 1rem auto;
+}
 
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.98);
-    position: absolute;
-    top: 100%; /* Positions it right below the navbar */
-    left: 0;
-    padding: 2rem 1rem;
-    gap: 0;
-    animation: slideDown 0.3s ease-out;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  }
-
-  @keyframes slideDown {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .nav-links[data-visible="true"] {
+.youtube {
     display: flex;
-  }
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
 
-  .nav-links li {
-    margin: 0.75rem 0;
-    text-align: center;
-  }
-
-  .nav-links a {
-    padding: 0.75rem;
+.youtube iframe {
     width: 100%;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.05);
+    max-width: 700px;
+    height: auto;
+    aspect-ratio: 16 / 9;
     border-radius: 8px;
-    margin: 0.25rem 0;
-  }
+}
 
-  .nav-links a::after {
-    display: none; /* Remove underline effect on mobile for simplicity */
-  }
+a {
+    color: #4CAF50; /* Green for links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #388e3c; /* Darker green on hover */
+}
+
+/* Tablet and larger phones (max-width: 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 5px 0.75rem;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: black; /* Match navbar background */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 1rem;
+        margin-right: 0; /* Remove right margin on mobile */
+        gap: 0.5rem;
+        animation: slideDown 0.3s ease-out;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .nav-links[data-visible="true"] {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+
+    .nav-links a {
+        padding: 0.75rem;
+        width: 100%;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    p, ul {
+        font-size: 0.9rem;
+    }
+
+    .hero img {
+        width: 100%;
+        max-height: 300px;
+        object-fit: cover;
+    }
+
+    .youtube iframe {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Small phones (max-width: 576px) */
+@media (max-width: 576px) {
+    .navbar {
+        padding: 3px 0.5rem;
+    }
+
+    .logo {
+        margin-left: 0.5rem;
+    }
+
+    .logo img {
+        width: 20px;
+        height: 20px;
+        margin-right: 0.5rem; /* Reduced spacing for smaller screens */
+    }
+
+    .logo a span {
+        font-size: 0.9rem;
+    }
+
+    .menu-toggle {
+        font-size: 1.5rem;
+    }
+
+    .nav-links {
+        padding: 0.5rem;
+        margin-right: 0; /* Ensure no right margin on small screens */
+    }
+
+    h1 {
+        font-size: 1.25rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    p, ul {
+        font-size: 0.85rem;
+    }
+
+    .youtube iframe {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .text-content p {
+        margin: 0.5rem 0;
+    }
 }

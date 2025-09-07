@@ -2,45 +2,115 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="/favicon/Growth (2).ico" type="image/x-icon" sizes="32*32">
-  <title>Contact me</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Techub to share your feedback or get in touch with our team.">
+
+    <!-- Font family -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="/css/footer.css" type="text/css">
+    <link rel="stylesheet" href="/css/contact.css" type="text/css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/images/codesss.png" type="image/png">
+
+    <title>Techub | Contact Me</title>
 </head>
 
 <body>
-  <center>
-    <h1 style="background-color:orange" "><u style="color: black;" >Contact Me</u></h1>
-    <img src="/images/contact.jpg" alt="" width="1300px" height="auto">
-  </center>
-  
-  <br>
-  <br>
-  <hr>
+    <!-- Navigation bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/">
+                    <img src="/images/codesss.png" alt="Techub Logo">
+                    <span>Techub | Beginner Guide</span>
+                </a>
+            </div>
+            <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul id="primary-navigation" class="nav-links" data-visible="false">
+                <li><a href="/html/about.html">About us</a></li>
+                <li><a href="/html/contact.html" class="active">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <center><h2 style="color: hotpink;">"We value your feedback! Share your thoughts with us."</h2></center>
-  <big style="color:brown">
-    
-    Thankyou!! "Thank you for being a part of our community. Your presence brightens our website! We are grateful for every visit, Thank you for choosing us, Gratitude fills our hearts as we see your continued support. 
-     <br></big>
-  <center>
-    
-    <div style="color:rgb(25, 6, 51)">
-      <img src="/public/contact.jpg" alt="" width="1000px">  <big><a href="https://mail.google.com/mail/u/0/#inbox?compose=CSkGSFfhvsPMXCPDWnfmVwxNGzkrldcqwXRcFjvccPCfmwdmsVsFfRNlVLGCWDKPTMQbxwncfBwVVXMlZGkHQLSnBpndQSGHbmdrmtjtlTMWWlMwKnQBXQBjBszkpQGvlBsqwVXVlWhDkhQRcldMRCjFglMXJdpnzMN" target="_main">kjha3185@gmail.com</a></big>
+    <!-- Main content -->
+    <main>
+        <section class="hero">
+            <h1>Contact Me</h1>
+            <img src="/images/contact.jpg" alt="Contact Techub">
+        </section>
 
-    </div>
-  </center>
-  </big>
-  <hr>
-  </center>
-    
- 
- <br>
- <center>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeTXyCDkkNqOz-T021M-2oEPSDK_4jRGpkeQ72sA3XXz2jUxw/viewform"> <h1><b> FEEDBACK FORM </b></h1> </a> <br>
+        <section class="feedback">
+            <h2>We value your feedback! Share your thoughts with us.</h2>
+            <p>Thank you for being a part of our community. Your presence brightens our website! We are grateful for every visit. Thank you for choosing us. Gratitude fills our hearts as we see your continued support.</p>
+            <div class="contact-info">
+                <a href="mailto:kjha3185@gmail.com">kjha3185@gmail.com</a>
+            </div>
+        </section>
 
-  </center>
+        <section class="feedback-form">
+            <h2><a href="https://docs.google.com/forms/d/e/1FAIpQLSeTXyCDkkNqOz-T021M-2oEPSDK_4jRGpkeQ72sA3XXz2jUxw/viewform" target="_blank">Feedback Form</a></h2>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="f-container">
+            <div class="f-row">
+                <div class="f-column">
+                    <h4>All Languages</h4>
+                    <ul>
+                        <li><a href="https://www.geeksforgeeks.org/java-tutorial/">Java</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/c-plus-plus/">C++</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/python-programming-language/">Python</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/c-programming-language/">C</a></li>
+                    </ul>
+                </div>
+                <div class="f-column">
+                    <h4>Best Field</h4>
+                    <ul>
+                        <li><a href="https://www.freecodecamp.org/news/tag/web-development/">Web Development</a></li>
+                        <li><a href="https://www.freecodecamp.org/news/tag/android-app-development/">Android Development</a></li>
+                        <li><a href="https://www.freecodecamp.org/news/tag/graphic-design/">Graphic Designing</a></li>
+                    </ul>
+                </div>
+                <div class="f-column">
+                    <h4>Help & Support</h4>
+                    <ul>
+                        <li><a href="/html/about.html" target="_blank">About us</a></li>
+                        <li><a href="/html/FAQ.html" target="_blank">FAQ</a></li>
+                        <li><a href="/html/privacy_policy.html" target="_blank">Privacy Policy</a></li>
+                        <li><a href="/html/T&C.html" target="_blank">Terms and Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="f-column">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/keshav_legend" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/keshav._.legend/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/keshav-jha%F0%9F%94%B0-7325a3212/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">Copyright © 2025 Techub. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/js/script.js" type="text/javascript"></script>
 </body>
 
 </html>
