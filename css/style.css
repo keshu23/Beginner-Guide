@@ -6,90 +6,174 @@
         box-sizing: border-box;
        }
 
-       .languages {
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  line-height: 5vh;
+}
 
-        background-image: url(../images/coding1.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-  
-       }
+.logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
 
+.logo img {
+  width: 25px;
+  height: 25px;
+  margin-right: 0.5rem;
+}
 
+.logo span {
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
 
-        h1{
-            color:rgba(4, 35, 18, 0.979);
-            text-align: center;
-            
-        }
-        h2
-        {
-            color: purple;
-            text-align: center;
-        }
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
 
-        big{
-            color :black;
-        }
-        i{
-            color: rgb(0, 0, 0);
-        }
-        h3{
-            color: rgb(10, 71, 68);
-        }
-        u
-        {
-            color: blue;
-        }
-       
-       
-   /* Smartphones */
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ddd;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 1rem 0;
+  }
+
+  .nav-links[data-visible="true"] {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 0;
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
+
+.languages {
+  background-image: url(../images/coding1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  color: rgba(4, 35, 18, 0.979);
+  text-align: center;
+}
+
+h2 {
+  color: purple;
+  text-align: center;
+}
+
+big {
+  color: black;
+}
+
+i {
+  color: rgb(0, 0, 0);
+}
+
+h3 {
+  color: rgb(10, 71, 68);
+}
+
+u {
+  color: blue;
+}
+
+/* Smartphones */
 @media (max-width: 480px) {
+  .homeimg {
+    width: 100%;
+  }
 
-    .header {
-      padding: 10px;
-    }
-  
-    #navbar {
-      flex-direction: column;
-      align-items: flex-start; 
-    }
-  
-    #navbar span {
-      display: none;  
-    }
-     
-    .homeimg {
-      width: 100%;
-    }
-  
-    .youtube iframe {
-      width: 100%;
-      height: 200px;
-    }
-  
-    .languages h2 {
-      font-size: 1.2rem; 
-    }
-  
-    .f-row {
-      flex-direction: column;
-    }
-    
-    .f-coloumn {
-      margin-bottom: 20px;
-    }
-    
+  .youtube iframe {
+    width: 100%;
+    height: 200px;
   }
-  
-  /* iPhones */
-  @media (min-width: 480px) and (max-width: 768px) {
-  
-    .container {
-      max-width: 600px;  
-    }
-    
-    .youtube iframe {
-      height: 300px;
-      width: 100%;
-    }
+
+  .languages h2 {
+    font-size: 1.2rem;
   }
+
+  .f-row {
+    flex-direction: column;
+  }
+
+  .f-coloumn {
+    margin-bottom: 20px;
+  }
+}
+
+/* iPhones */
+@media (min-width: 480px) and (max-width: 768px) {
+  .container {
+    max-width: 600px;
+  }
+
+  .youtube iframe {
+    height: 300px;
+    width: 100%;
+  }
+}

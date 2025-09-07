@@ -19,7 +19,6 @@
     
     <!-- ****Adding css part***** -->
     <link rel="stylesheet" href="/css/style.css" type="text/css">
-    <link rel="stylesheet" href="/css/navbar.css" type="text/css">
     <link rel="stylesheet" href="/css/footer.css"  type="text/css">
 
     <!-- ******Adding favicon part**** -->
@@ -48,26 +47,23 @@
   <!-- navigation bar -->
 
   <header>
-
-    <div class="navbar">
-     <!-- <img src="/images/graph-bar_10019801.png" alt=""><span>TECHUB</span> -->
-      <span class="logo">
-        <a href="/"> <img src="./images/codesss.png" alt=""> </a>
-       <a href="/"> <span>Techub | Beginner Guide</span></a>
-      </span>
-
-   
-    
-    <span class="menu-items">
-      
-        <a href="/html/about.html">About us</a>
-        <a href="/html/contact.html">Contact us</a>
-       
-    </span>
-    
-    </div>
-     
- </header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="/">
+          <img src="./images/codesss.png" alt="Techub Logo">
+          <span>Techub | Beginner Guide</span>
+        </a>
+      </div>
+      <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false">
+        <span class="sr-only">Menu</span>
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul id="primary-navigation" class="nav-links" data-visible="false">
+        <li><a href="/html/about.html">About us</a></li>
+        <li><a href="/html/contact.html">Contact us</a></li>
+      </ul>
+    </nav>
+  </header>
  <!-- bodyline for programming -->
  
  
@@ -401,4 +397,3 @@
     <!-- *********************END OF FOOTER ************************************ -->
 
 </html>
-
